@@ -1,0 +1,23 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <section id="catalog">
+    <group id="search">
+
+      <field id="eindexer_host" translate="label" type="text" sortOrder="550" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+        <label>Elasticsearch host</label>
+        <depends>
+          <field id="engine">elasticsearch</field>
+        </depends>
+      </field>
+
+      <field id="eindexer_port" translate="label" type="text" sortOrder="550" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+        <label>Elasticsearch port</label>
+        <depends>
+          <field id="engine">elasticsearch</field>
+        </depends>
+      </field>
+
+    </group>
+    </section>
+  </system>
+</config>

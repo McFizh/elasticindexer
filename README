@@ -1,0 +1,9 @@
+Module for magento 2.1, which indexes products to elasticsearch. Does not contain any frontend implementation, because this module is mainly created for my magento-react project.
+
+https://github.com/McFizh/magento2-react/
+
+* How to install module
+
+Copy content of src folder to folder 'app/code/McFish/ElasticIndexer', also copy the whole vendor folder to ElasticIndexer folder. Note you must copy the vendor folder, not it's content.
+
+

@@ -1,0 +1,16 @@
+{
+    "name": "mcfish/elasticindexer",
+    "description": "Elasticsearch indexer for magento",
+    "type": "magento2-module",
+    "extra": {
+        "map": [
+            [
+                "*",
+                "McFish/ElasticIndexer"
+            ]
+        ]
+    },
+    "require": {
+        "elasticsearch/elasticsearch": "5.3"
+    }
+}
