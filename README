@@ -4,6 +4,14 @@ https://github.com/McFizh/magento2-react/
 
 * How to install module
 
-Copy content of src folder to folder 'app/code/McFish/ElasticIndexer', also copy the whole vendor folder to ElasticIndexer folder. Note you must copy the vendor folder, not it's content.
+As this module is not listed in Magentos marketplace, you need to install it manually from github. Note, this will mess with your composer.json files "repository" section. Make sure you have original file stored in safe place.
 
+composer config repositories.0 vcs https://github.com/mcfizh/elasticindexer
+composer require mcfish/elasticindexer
 
+Now you can restore composer.json files repository section from backup.
+
+To make the module actually do something, run the following commands on magentos root:
+
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
