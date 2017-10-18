@@ -8,10 +8,15 @@ As this module is not listed in Magentos marketplace, you need to install it man
 
 composer config repositories.0 vcs https://github.com/mcfizh/elasticindexer
 composer require mcfish/elasticindexer
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
 
 Now you can restore composer.json files repository section from backup.
 
-To make the module actually do something, run the following commands on magentos root:
+Reindex products with command:
 
-php bin/magento setup:upgrade
-php bin/magento setup:di:compile
+php bin/magento indexer:reindex catalogsearch_fulltext
+
+and if for some reason the indexer crashes, you can reset locks with command:
+
+php bin/magento indexer:reset catalogsearch_fulltext

@@ -3,7 +3,6 @@ namespace McFish\ElasticIndexer\Model\ResourceModel;
  
 use Magento\CatalogSearch\Model\ResourceModel\EngineInterface;
  
- 
 class Engine implements EngineInterface
 {
  

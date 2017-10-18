@@ -76,7 +76,11 @@ class IndexerHandler implements IndexerInterface
             if( ($scope = $this->parseScope($dimension)) === false)
                 continue;
 
-            echo "!clean!\n";
+            try {
+                $response = $this->elasticClient->indices()->delete([ "index" => 'data_'.$scope ]);
+            } catch(\Elasticsearch\Common\Exceptions\Missing404Exception $e) {
+                // It's ok, if the index is missing.. We haven't just created it yet
+            }
         }
     }
  
